@@ -1,11 +1,12 @@
-import type { NextPage } from "next";
-
-const Page: NextPage = () => {
+import { getPosts } from '@/lib/posts'
+import { Post } from '@/ui/post'
+ 
+export default async function Page() {
+  const posts = await getPosts()
+ 
   return (
-    <>
-        <h1>Test 1</h1>
-    </>
+    <ul>
+      Hello
+    </ul>
   )
 }
-
-export default Page
